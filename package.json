@@ -1,0 +1,35 @@
+{
+  "name": "sample-electron-react",
+  "version": "1.0.0",
+  "description": "",
+  "main": "public/electron.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "concurrently \"npm run react:start\" \"npm run electron:start\"",
+    "react:start": "react-scripts start",
+    "electron:start": "wait-on http://localhost:3000 && electron ."
+  },
+  "keywords": [],
+  "author": "jeremy-jaemin",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^7.4.0",
+    "electron": "^20.1.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "^5.0.1",
+    "wait-on": "^6.0.1"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
